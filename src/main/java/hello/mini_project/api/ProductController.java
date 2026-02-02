@@ -23,12 +23,8 @@ public class ProductController {
      * Post /api/products
      * */
     @PostMapping
-    public ResponseEntity<Long> createProduct(@RequestBody ProductDto.Request request){
-        Product product = new Product();
-        product.setName(request.name());
-        product.setPrice(request.price());
-
-        Long create_productid = productService.saveProduct(product);
+    public ResponseEntity<Long> createProduct(@RequestBody @Valid ProductDto.Request request){
+        Long create_productid = productService.saveProduct(request);
         return ResponseEntity.ok(create_productid);
     }
 

@@ -6,6 +6,9 @@ import hello.mini_project.service.OrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -41,4 +44,19 @@ public class OrderController {
          Order order = orderService.findOne(id);
          return ResponseEntity.ok(OrderDto.Response.from(order));
      }
+
+
+     /**
+      * 주문목록 조회(Pagination)
+      * GET /api/orders?page=0?size=10
+      * */
+     @GetMapping
+    public ResponseEntity<Page<OrderDto.Response>> getOrders(
+             @PageableDefault Pageable pageable){
+         Page<OrderDto.Response> responses = orderService.getOrderList(pageable);
+
+         return ResponseEntity.ok(responses);
+     }
+
+
 }

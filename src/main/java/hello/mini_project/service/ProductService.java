@@ -17,9 +17,14 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     @Transactional
-    public Long saveProduct(Product product){
-        productRepository.save(product);
-        return product.getId();
+    public Long saveProduct(ProductDto.Request request){
+        Product product = Product.builder()
+                .name(request.name())
+                .price(request.price())
+                .stock(request.stock())
+                .build();
+
+        return productRepository.save(product).getId();
     }
 
     public List<Product> findProducts(){
