@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: 'mysql:8.0' # 버전 명시
+    container_name: my-mysql-container
+    environment:
+
+      MYSQL_DATABASE: 'mydatabase'
+      MYSQL_USER: 'myuser'
+      MYSQL_PASSWORD: 'secret'
+      MYSQL_ROOT_PASSWORD: 'verysecret'
+      TZ: 'Asia/Seoul' # 시간대 설정
+
+    ports:
+      - '3307:3306'
