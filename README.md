@@ -1,4 +1,4 @@
-1. N+1 문제 해결
+##1. N+1 문제 해결
 
 * 수정전
 ```
@@ -43,13 +43,13 @@ fetch join을 이용해 orderItem, product의 정보까지 가져오는 것을 �
 
 
 
-2. 재고감소 기능 시나리오 - Postman 테스트
+##2. 재고감소 기능 시나리오 - Postman 테스트
 
 
-1. 두바이쫀득쿠키 재고 2개 
+Step1. 두바이쫀득쿠키 재고 2개 
 <img width="456" height="240" alt="image" src="https://github.com/user-attachments/assets/e6b8b970-fcfb-46b6-b9ff-c1befa3d9630" />
 
-2. 두바이쫀득쿠키 주문(주문수량:1) -> 두바이쫀득쿠키 주문(주문수량:2) 
+Step2. 두바이쫀득쿠키 주문(주문수량:1) -> 두바이쫀득쿠키 주문(주문수량:2) 
 <img width="1052" height="374" alt="image" src="https://github.com/user-attachments/assets/4c59c730-07f1-4b42-a506-1fa5d766214c" />
 
 
