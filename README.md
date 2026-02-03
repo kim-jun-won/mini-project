@@ -45,7 +45,7 @@ fetch join을 이용해 orderItem, product의 정보까지 가져오는 것을 �
 
 2. 재고감소 기능 시나리오 - Postman 테스트
 
-// get
+
 1. 두바이쫀득쿠키 재고 2개 
 <img width="456" height="240" alt="image" src="https://github.com/user-attachments/assets/e6b8b970-fcfb-46b6-b9ff-c1befa3d9630" />
 
